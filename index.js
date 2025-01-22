@@ -7,12 +7,12 @@
 // }
 
 
-// Crear una función que calcule el área de un cuadrado.
+// Crear una función que convierta una cantidad de minutos en segundos.
 
-function calcularAreaCuadrado(lado) {
-    let area = lado * lado
-    return area;
+function convertirMinutosASegundos(minutos) {
+    let segundos = minutos * 60
+    return segundos;
 }
 
-let resultado = calcularAreaCuadrado(5);
-console.log("el area del cuadrado  con lado 5 es: " + resultado);
+let resultado = convertirMinutosASegundos(10);
+console.log("10 minutos equivalen a: " + resultado + " segundos ");
