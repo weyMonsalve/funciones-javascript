@@ -7,12 +7,10 @@
 // }
 
 
-//   Crear una función que calcule el perímetro de un triángulo.
+//   Crear una función que una dos textos en una sola frase.
 
-function calcularPerimetroTriangulo(lado1, lado2, lado3) {
-    let perimetro = lado1 + lado2 + lado3;
-    return perimetro;
+function concatenarTexto(texto1, texto2) {
+    return texto1 + " " + texto2;
 }
-
-let resultado = calcularPerimetroTriangulo(3, 4, 5);
-console.log("el perimetro es: " + resultado);
+let palabra = concatenarTexto("Andres", "Felipe ");
+console.log(" La palabra concatenada es: " + palabra);
