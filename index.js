@@ -7,10 +7,17 @@
 // }
 
 
-//   Crear una función que una dos textos en una sola frase.
+//   Leer tres números y decir cuál de ellos es el que tiene el valor intermedio
 
-function concatenarTexto(texto1, texto2) {
-    return texto1 + " " + texto2;
+function numeroIntermedio(num1, num2, num3) {
+    if ((num1 < num2 && num1 > num3) || (num1 > num2 && num1 < num3)) {
+        return "El numero intermedio es el: " + num1;
+    } else if ((num2 > num1 && num2 < num3) || (num2 < num1 && num2 > num3)) {
+        return "El numero intermedio es el: " + num2;
+    } else {
+        return "El numero intermedio es el: " + num3;
+    }
 }
-let palabra = concatenarTexto("Andres", "Felipe ");
-console.log(" La palabra concatenada es: " + palabra);
+
+let intermedio = numeroIntermedio(1, 5, 3);
+console.log(intermedio);
