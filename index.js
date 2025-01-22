@@ -7,25 +7,29 @@
 // }
 
 
-//  En un almacén se hace un 20% de descuento a los clientes
-//  cuya compra supere los $1,000 ¿cuál será la cantidad que pagará
-//  una persona por su compra?
+// Leer dos números si el primero es mayor mostrar la 
+// Resta de los dos números, por otro lado si el segundo es mayor mostrar la suma de ambos
 
-function compra(valorCompra) {
-    let descuento = 0;
-    let precioFinal = 0;
 
-    if (valorCompra > 1000) {
-        descuento = valorCompra * 0.2;
-        precioFinal = valorCompra - descuento;
+function calcularOperacion(numero1, numero2) {
+    if (numero1 > numero2) {
 
+        return `La resta de los números es: ${numero1 - numero2}`;
+    } else if (numero2 > numero1) {
+
+        return `La suma de los números es: ${numero1 + numero2}`;
     } else {
-        precioFinal = valorCompra;
+
+        return "Ambos números son iguales.";
     }
-
-    return "El valor de la compra despues del descuento es: " + precioFinal;
-
 }
 
-let total = compra(5000);
-console.log(total);
+
+let num1 = 8;
+let num2 = 20;
+
+
+let resultado = calcularOperacion(num1, num2);
+
+
+console.log(resultado);
