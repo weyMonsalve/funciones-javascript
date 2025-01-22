@@ -7,11 +7,12 @@
 // }
 
 
-// Crear una función que calcule el doble de un número.
+// Crear una función que convierta temperaturas de Celsius a Fahrenheit.
 
-function calcularDoble(numero) {
-    return numero * 2;
+function convertirCelsiusAFahrenheit(celsius) {
+    let fahrenheit = (celsius * 9 / 5) + 32;
+    return fahrenheit
 }
 
-let resultado = calcularDoble(8);
-console.log("el doble de 8 es: " + resultado);
+let resultado = convertirCelsiusAFahrenheit(25);
+console.log("25 grados Celsius equivalen a " + resultado + " grados Fahrenheit.");
