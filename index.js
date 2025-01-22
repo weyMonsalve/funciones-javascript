@@ -7,12 +7,14 @@
 // }
 
 
-// Crear una función que convierta una cantidad de minutos en segundos.
+//  Crear una función que determine si un número es par o impar.
 
-function convertirMinutosASegundos(minutos) {
-    let segundos = minutos * 60
-    return segundos;
+function esPar(numero) {
+    if (numero % 2 === 0) {
+        return "Es par";
+    } else {
+        return "Es impar";
+    }
 }
-
-let resultado = convertirMinutosASegundos(10);
-console.log("10 minutos equivalen a: " + resultado + " segundos ");
+let resultado = esPar(7);
+console.log("El número 7 " + resultado);
