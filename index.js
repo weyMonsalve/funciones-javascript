@@ -7,12 +7,25 @@
 // }
 
 
-//   Leer tres calificaciones de un alumno y determinar su promedio
+//  En un almacén se hace un 20% de descuento a los clientes
+//  cuya compra supere los $1,000 ¿cuál será la cantidad que pagará
+//  una persona por su compra?
 
-function promedioNotas(cal1, cal2, cal3) {
-    let calificacionPromedio = ((cal1 + cal2 + cal3) / 3).toFixed(2);
-    return "El promedio de las notas es: " + calificacionPromedio;
+function compra(valorCompra) {
+    let descuento = 0;
+    let precioFinal = 0;
+
+    if (valorCompra > 1000) {
+        descuento = valorCompra * 0.2;
+        precioFinal = valorCompra - descuento;
+
+    } else {
+        precioFinal = valorCompra;
+    }
+
+    return "El valor de la compra despues del descuento es: " + precioFinal;
+
 }
 
-let promedio = promedioNotas(4, 5, 4, 2, 5, 0);
-console.log(promedio);
+let total = compra(5000);
+console.log(total);
