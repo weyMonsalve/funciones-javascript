@@ -7,14 +7,12 @@
 // }
 
 
-//  Crear una función que determine si un número es par o impar.
+//   Crear una función que calcule el perímetro de un triángulo.
 
-function esPar(numero) {
-    if (numero % 2 === 0) {
-        return "Es par";
-    } else {
-        return "Es impar";
-    }
+function calcularPerimetroTriangulo(lado1, lado2, lado3) {
+    let perimetro = lado1 + lado2 + lado3;
+    return perimetro;
 }
-let resultado = esPar(7);
-console.log("El número 7 " + resultado);
+
+let resultado = calcularPerimetroTriangulo(3, 4, 5);
+console.log("el perimetro es: " + resultado);
