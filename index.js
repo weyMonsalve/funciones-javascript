@@ -7,12 +7,12 @@
 // }
 
 
-// Crear una función que convierta temperaturas de Celsius a Fahrenheit.
+// Crear una función que calcule el área de un cuadrado.
 
-function convertirCelsiusAFahrenheit(celsius) {
-    let fahrenheit = (celsius * 9 / 5) + 32;
-    return fahrenheit
+function calcularAreaCuadrado(lado) {
+    let area = lado * lado
+    return area;
 }
 
-let resultado = convertirCelsiusAFahrenheit(25);
-console.log("25 grados Celsius equivalen a " + resultado + " grados Fahrenheit.");
+let resultado = calcularAreaCuadrado(5);
+console.log("el area del cuadrado  con lado 5 es: " + resultado);
