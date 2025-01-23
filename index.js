@@ -7,29 +7,42 @@
 // }
 
 
-// Leer dos números si el primero es mayor mostrar la 
-// Resta de los dos números, por otro lado si el segundo es mayor mostrar la suma de ambos
+// Crear un programa que realice las operaciones 
+// matemáticas de suma, resta, multiplicación, división,
+//  al digitar dos números.
 
 
-function calcularOperacion(numero1, numero2) {
-    if (numero1 > numero2) {
-
-        return `La resta de los números es: ${numero1 - numero2}`;
-    } else if (numero2 > numero1) {
-
-        return `La suma de los números es: ${numero1 + numero2}`;
-    } else {
-
-        return "Ambos números son iguales.";
-    }
+function calculador(num1, num2) {
+    return function(operador) {
+        if (operador === 'suma') {
+            return num1 + num2;
+        }
+        if (operador === 'resta') {
+            return num1 - num2;
+        }
+        if (operador === 'multiplicacion') {
+            return num1 * num2;
+        }
+        if (operador === 'division') {
+            if (num2 === 0) {
+                return 'Error: No se puede dividir entre 0';
+            }
+            return num1 / num2;
+        }
+        return 'Error: Operador no válido';
+    };
 }
 
 
-let num1 = 8;
-let num2 = 20;
+var calculo = calculador(75, 50);
+var sum = calculo('suma');
+var rest = calculo('resta');
+var mult = calculo('multiplicacion');
+var div = calculo('division');
+var invalid = calculo('mod');
 
-
-let resultado = calcularOperacion(num1, num2);
-
-
-console.log(resultado);
+console.log(sum);
+console.log(rest);
+console.log(mult);
+console.log(div);
+//console.log(invalid);
