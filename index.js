@@ -7,27 +7,23 @@
 // }
 
 
-// numeros primos
+// 
 
-function esPrimo(numero) {
-
-    if (numero > 0 && numero < 4 || numero === 5) {
-        return true;
+function tablaMultiplicar(numero) {
+    let tabla = '';
+    for (i = 1; i <= 10; i++) {
+        tabla += `${numero} * ${i} = ${numero * i} \n`;
     }
-
-    if ((numero % 2 === 0) || (numero % 3 === 0) || (numero % 5 === 0)) {
-        return false;
-    }
-    return true;
+    return tabla;
 }
 
-const numeros = [2, 3, 89, 34, 23, 11, 17, 29, 30, 6, 18];
-let primos = [];
-
-for (let i = 0; i < numeros.length; i++) {
-    if (esPrimo(numeros[i])) {
-        primos.push(numeros[i]);
+function tablaMultiplicar(numero) {
+    let tabla = [];
+    for (i = 1; i <= 10; i++) {
+        tabla.push({ tabla: numero, multiplicador: i, valor: numero * i });
     }
+    return tabla;
 }
 
-console.log(primos);
+let tabla31 = tablaMultiplicar(31);
+console.log(tabla31);
