@@ -1,39 +1,26 @@
-// Crear un saludo personalizado
+// 10. Determinar si un año es bisiesto
 
-// Crea una función llamada crearSaludo que reciba dos parámetros:
+// Crea una función llamada esBisiesto que reciba un año como parámetro. Devuelve true si el 
+// año es bisiesto y false si no lo es. Un año es bisiesto si:
 
-// El nombre de una persona,
-// Y su idioma (puede ser "es" para español, "en" para inglés, o "fr" para francés).
-
-// La función debe devolver un saludo en el idioma correspondiente.
-// Por ejemplo:
-
-// Para "es" y "Juan", devuelve "¡Hola, Juan!".
-// Para "en" y "John", devuelve "Hello, John!".
+// Es divisible entre 4 y no divisible entre 100, o
+// Es divisible entre 400.
 
 
+function esBisiesto(anio) {
 
-
-
-function crearSaludo(nombre, idioma) {
-
-    if (typeof nombre !== "string" || nombre.trim() === "") {
-        return "El nombre debe ser un texto válido.";
+    if (isNaN(anio) || anio <= 0 || !Number.isInteger(anio)) {
+        return "Debes ingresar un año válido (un número entero positivo).";
     }
 
-    switch (idioma) {
-        case "es":
-            return ("¡Hola " + nombre + "!");
-        case "en":
-            return ("¡hello " + nombre + "!");
-        case "fr":
-            return ("¡bon jour " + nombre + "!");
-        default:
-            return "Idioma no reconocido";
+    if ((anio % 4 === 0 && anio % 100 !== 0) || anio % 400 === 0) {
+        return true;
+    } else {
+        return false;
     }
-
 }
 
+
 module.exports = {
-    crearSaludo
-};
+    esBisiesto
+}

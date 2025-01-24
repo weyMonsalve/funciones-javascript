@@ -4,16 +4,20 @@
 // Importamos la función puedeVotar desde index.js
 const index = require('./index');
 
+const resultado1 = index.esBisiesto(2024);
+console.log("2024 es bisiesto:", resultado1);
 
-const saludo1 = index.crearSaludo("Andres", "es");
-console.log(saludo1);
+const resultado2 = index.esBisiesto(1900);
+console.log("1900 es bisiesto:", resultado2);
 
-const saludo2 = index.crearSaludo("Julio", "en");
-console.log(saludo2);
+const resultado3 = index.esBisiesto(2000);
+console.log("2000 es bisiesto:", resultado3);
 
-const saludo3 = index.crearSaludo("Mauricio", "fr");
-console.log(saludo3);
+const resultado4 = index.esBisiesto(2023);
+console.log("2023 es bisiesto:", resultado4);
 
+const resultado5 = index.esBisiesto(-400);
+console.log("Año -400:", resultado5);
 
-const saludo4 = index.crearSaludo("wbeimar", "jap");
-console.log(saludo4)
+const resultado6 = index.esBisiesto("abc");
+console.log('Año "abc":', resultado6);
