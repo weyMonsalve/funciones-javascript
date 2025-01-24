@@ -2,14 +2,5 @@
 
 const index = require('./index');
 
-const resultadoSuma = index.calculadora(10, "andres", '+');
-console.log('Resultado de la suma:', resultadoSuma);
-
-const resultadoResta = index.calculadora("a", 5, '-');
-console.log('Resultado de la resta:', resultadoResta);
-
-const resultadoMultiplicacion = index.calculadora(10, 5, '*');
-console.log('Resultado de la multiplicación:', resultadoMultiplicacion);
-
-const resultadoDivision = index.calculadora(10, "hola", '/');
-console.log('Resultado de la división:', resultadoDivision);
+const promedio = index.calcularPromedio(5, 10, "hola");
+console.log('El resultado del promedio de los 3 numeros es:', promedio);

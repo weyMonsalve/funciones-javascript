@@ -1,33 +1,21 @@
-// calculadora
+// Promedio de tres números
 
-function calculadora(a, b, operador) {
+// Función calcularPromedio
+function calcularPromedio(num1, num2, num3) {
 
-    // validacion para que los campos sean solo numericos
-
-    if (isNaN(a) || isNaN(b)) {
-        return "los valores de a y b deben ser numericos";
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        return "Los valores deben ser numericos."
     }
 
-    switch (operador) {
-        case "+":
-            return a + b;
-        case "-":
-            return a - b;
-        case "*":
-            return a * b;
-        case "/":
-            if (b === 0) {
-                return "Operacion no valida";
-            }
-            return a / b;
-        default:
-            return "operacion no valida.";
-    }
+    let suma = num1 + num2 + num3;
+
+    let promedio = suma / 3;
+
+    return promedio;
 }
 
 
-// exportamos las funciones
 
 module.exports = {
-    calculadora
-}
+    calcularPromedio
+};
