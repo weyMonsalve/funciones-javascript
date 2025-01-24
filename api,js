@@ -5,8 +5,15 @@
 const index = require('./index');
 
 
-const resultado1 = index.mayorDeDosNumeros(5, 10);
-console.log(resultado1);
+const saludo1 = index.crearSaludo("Andres", "es");
+console.log(saludo1);
 
-const resultado2 = index.mayorDeDosNumeros(20, 2);
-console.log(resultado2);
+const saludo2 = index.crearSaludo("Julio", "en");
+console.log(saludo2);
+
+const saludo3 = index.crearSaludo("Mauricio", "fr");
+console.log(saludo3);
+
+
+const saludo4 = index.crearSaludo("wbeimar", "jap");
+console.log(saludo4)

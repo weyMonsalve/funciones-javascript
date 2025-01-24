@@ -1,24 +1,39 @@
-//  Comparar dos números y devolver el mayor
+// Crear un saludo personalizado
 
-// Crea una función llamada mayorDeDosNumeros que reciba dos números y devuelva el mayor de ellos. 
-// Si ambos números son iguales, devuelve un mensaje que diga "Los números son iguales".
+// Crea una función llamada crearSaludo que reciba dos parámetros:
+
+// El nombre de una persona,
+// Y su idioma (puede ser "es" para español, "en" para inglés, o "fr" para francés).
+
+// La función debe devolver un saludo en el idioma correspondiente.
+// Por ejemplo:
+
+// Para "es" y "Juan", devuelve "¡Hola, Juan!".
+// Para "en" y "John", devuelve "Hello, John!".
 
 
-function mayorDeDosNumeros(numero1, numero2) {
 
-    if (isNaN(num1) || isNaN(num2)) {
-        return "Ambos valores deben ser números.";
+
+
+function crearSaludo(nombre, idioma) {
+
+    if (typeof nombre !== "string" || nombre.trim() === "") {
+        return "El nombre debe ser un texto válido.";
     }
 
-    if (numero1 > numero2) {
-        return ("El numero mayor es el numero: ", numero1);
-    } else if (numero2 > numero1) {
-        return ("El numero mayor es el numero: ", numero2);
-    } else {
-        return "Ambos numeros son iguales";
+    switch (idioma) {
+        case "es":
+            return ("¡Hola " + nombre + "!");
+        case "en":
+            return ("¡hello " + nombre + "!");
+        case "fr":
+            return ("¡bon jour " + nombre + "!");
+        default:
+            return "Idioma no reconocido";
     }
+
 }
 
 module.exports = {
-    mayorDeDosNumeros
-}
+    crearSaludo
+};
