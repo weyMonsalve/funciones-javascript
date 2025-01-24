@@ -1,23 +1,24 @@
-// Calcular el área de un rectángulo
+//  Comparar dos números y devolver el mayor
 
-// Crea una función llamada calcularAreaRectangulo que reciba dos parámetros:
+// Crea una función llamada mayorDeDosNumeros que reciba dos números y devuelva el mayor de ellos. 
+// Si ambos números son iguales, devuelve un mensaje que diga "Los números son iguales".
 
-// La base del rectángulo,
-// Y su altura.
 
-// La función debe devolver el área del rectángulo.
+function mayorDeDosNumeros(numero1, numero2) {
 
-function calcularAreaRectangulo(base, altura) {
-
-    if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
-        return "Los datos a ingresar deeben ser numericos y que sean positivos.";
+    if (isNaN(num1) || isNaN(num2)) {
+        return "Ambos valores deben ser números.";
     }
 
-    const area = base * altura;
-
-    return "El area del triangulo es. ", area;
+    if (numero1 > numero2) {
+        return ("El numero mayor es el numero: ", numero1);
+    } else if (numero2 > numero1) {
+        return ("El numero mayor es el numero: ", numero2);
+    } else {
+        return "Ambos numeros son iguales";
+    }
 }
 
 module.exports = {
-    calcularAreaRectangulo
+    mayorDeDosNumeros
 }

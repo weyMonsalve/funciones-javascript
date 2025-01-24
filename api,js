@@ -5,8 +5,8 @@
 const index = require('./index');
 
 
-const resultado1 = index.calcularAreaRectangulo(5, 10);
+const resultado1 = index.mayorDeDosNumeros(5, 10);
 console.log(resultado1);
 
-const resultado2 = index.calcularAreaRectangulo(0, "a");
+const resultado2 = index.mayorDeDosNumeros(20, 2);
 console.log(resultado2);
