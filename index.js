@@ -1,40 +1,23 @@
-// Promedio de tres números
+// Calcular el área de un rectángulo
 
-// Determinar si una persona puede votar  Determinar si una persona puede votar
+// Crea una función llamada calcularAreaRectangulo que reciba dos parámetros:
 
-// Crea una función llamada puedeVotar que reciba dos parámetros:
+// La base del rectángulo,
+// Y su altura.
 
-// La edad de la persona,
-// Y el país donde vive.
+// La función debe devolver el área del rectángulo.
 
-// La función debe devolver true si la persona puede votar en ese país (por ejemplo, 
-//     en muchos países se puede votar a partir de los 18 años).
+function calcularAreaRectangulo(base, altura) {
 
-
-
-function puedeVotar(edad, pais) {
-    const paises = {
-        "Argentina": 18,
-        "España": 18,
-        "Estados Unidos": 18,
-        "Brasil": 16,
-        "Suiza": 18,
-        "Colombia": 18
-    };
-
-
-    if (paises[pais] !== undefined) {
-        if (edad >= paises[pais]) {
-            return `Puedes votar en ${pais}.`;
-        } else {
-            return `No puedes votar en ${pais}. Necesitas ${paises[pais] - edad} años más.`;
-        }
-    } else {
-        return `No tenemos información sobre la edad mínima para votar en ${pais}.`;
+    if (isNaN(base) || isNaN(altura) || base <= 0 || altura <= 0) {
+        return "Los datos a ingresar deeben ser numericos y que sean positivos.";
     }
+
+    const area = base * altura;
+
+    return "El area del triangulo es. ", area;
 }
 
-
 module.exports = {
-    puedeVotar
-};
+    calcularAreaRectangulo
+}

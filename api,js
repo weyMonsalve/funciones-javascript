@@ -5,20 +5,8 @@
 const index = require('./index');
 
 
-const resultado1 = index.puedeVotar(20, "Argentina");
+const resultado1 = index.calcularAreaRectangulo(5, 10);
 console.log(resultado1);
 
-const resultado2 = index.puedeVotar(16, "Brasil");
+const resultado2 = index.calcularAreaRectangulo(0, "a");
 console.log(resultado2);
-
-const resultado3 = index.puedeVotar(17, "Estados Unidos");
-console.log(resultado3);
-
-const resultado4 = index.puedeVotar(20, "México");
-console.log(resultado4);
-
-const resultado5 = index.puedeVotar(16, "Colombia");
-console.log(resultado5);
-
-const resultado6 = index.puedeVotar(25, "Suiza");
-console.log(resultado6);
