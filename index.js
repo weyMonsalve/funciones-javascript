@@ -2,22 +2,28 @@
 
 function calculadora(a, b, operador) {
 
-    if (operador === "+") {
-        return a + b;
-    } else if (operador === "-") {
-        return a - b;
-    } else if (operador === "*") {
-        return a * b;
-    } else if (operador === "/") {
-        if (b === 0) {
-            return "Error: No se puede dividir entre 0";
-        }
-        return a / b;
-    } else {
-        return "Error: Operación no válida";
+    // validacion para que los campos sean solo numericos
+
+    if (isNaN(a) || isNaN(b)) {
+        return "los valores de a y b deben ser numericos";
+    }
+
+    switch (operador) {
+        case "+":
+            return a + b;
+        case "-":
+            return a - b;
+        case "*":
+            return a * b;
+        case "/":
+            if (b === 0) {
+                return "Operacion no valida";
+            }
+            return a / b;
+        default:
+            return "operacion no valida.";
     }
 }
-
 
 
 // exportamos las funciones

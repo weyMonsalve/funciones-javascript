@@ -2,14 +2,14 @@
 
 const index = require('./index');
 
-const resultadoSuma = index.calculadora(10, 5, '+');
+const resultadoSuma = index.calculadora(10, "andres", '+');
 console.log('Resultado de la suma:', resultadoSuma);
 
-const resultadoResta = index.calculadora(10, 5, '-');
+const resultadoResta = index.calculadora("a", 5, '-');
 console.log('Resultado de la resta:', resultadoResta);
 
 const resultadoMultiplicacion = index.calculadora(10, 5, '*');
 console.log('Resultado de la multiplicación:', resultadoMultiplicacion);
 
-const resultadoDivision = index.calculadora(10, 5, '/');
+const resultadoDivision = index.calculadora(10, "hola", '/');
 console.log('Resultado de la división:', resultadoDivision);
