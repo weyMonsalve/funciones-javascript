@@ -1,25 +1,40 @@
 // Promedio de tres números
 
-// Convertir horas y minutos a segundos
+// Determinar si una persona puede votar  Determinar si una persona puede votar
 
-// Función que convierte horas y minutos a segundos
-function convertirAHorasASegundos(horas, minutos) {
+// Crea una función llamada puedeVotar que reciba dos parámetros:
 
-    if (isNaN(horas) || isNaN(minutos)) {
-        return "Los datos ingresados deben ser numericos.";
+// La edad de la persona,
+// Y el país donde vive.
+
+// La función debe devolver true si la persona puede votar en ese país (por ejemplo, 
+//     en muchos países se puede votar a partir de los 18 años).
+
+
+
+function puedeVotar(edad, pais) {
+    const paises = {
+        "Argentina": 18,
+        "España": 18,
+        "Estados Unidos": 18,
+        "Brasil": 16,
+        "Suiza": 18,
+        "Colombia": 18
+    };
+
+
+    if (paises[pais] !== undefined) {
+        if (edad >= paises[pais]) {
+            return `Puedes votar en ${pais}.`;
+        } else {
+            return `No puedes votar en ${pais}. Necesitas ${paises[pais] - edad} años más.`;
+        }
+    } else {
+        return `No tenemos información sobre la edad mínima para votar en ${pais}.`;
     }
-
-    // Convertimos las horas a segundos (1 hora = 3600 segundos)
-    const segundosPorHoras = horas * 3600;
-
-    // Convertimos los minutos a segundos (1 minuto = 60 segundos)
-    const segundosPorMinutos = minutos * 60;
-
-    // Devolvemos el total de segundos
-    return segundosPorHoras + segundosPorMinutos;
 }
 
 
 module.exports = {
-    convertirAHorasASegundos
+    puedeVotar
 };
