@@ -1,6 +1,8 @@
 // Importamos el módulo matematicas.js
 
+
 const index = require('./index');
 
-const promedio = index.calcularPromedio(5, 10, "hola");
-console.log('El resultado del promedio de los 3 numeros es:', promedio);
+const resultado = index.convertirAHorasASegundos(2, "a");
+
+console.log("El total de los segundos es: ", resultado);
