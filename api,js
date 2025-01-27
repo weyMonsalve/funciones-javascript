@@ -1,5 +1,5 @@
 const index = require('./index');
 
-console.log(index.convertirAFahrenheit(0));
-console.log(index.convertirAFahrenheit(25));
-console.log(index.convertirAFahrenheit(100));
+const resultado = index.sumarArray([1, 2, 3, 4, 5])
+
+console.log("La suma total es: ", resultado);
