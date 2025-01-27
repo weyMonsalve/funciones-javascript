@@ -1,5 +1,5 @@
 const index = require('./index');
 
-const resultado = index.contarCaracters("Hola, mundo!");
-
-console.log("El numero de caracteres es: ", resultado);
+console.log(index.determinarSigno(10));
+console.log(index.determinarSigno(-5));
+console.log(index.determinarSigno(0));
