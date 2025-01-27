@@ -1,17 +1,10 @@
-// Crear una arrow function que reciba un número y determine si es positivo, negativo o cero.
+//  Escribir una arrow function que reciba un array de palabras y devuelva un nuevo array con la longitud de cada palabra.
 
-const determinarSigno = (numero) => {
+const longitudesPalabras = (palabras) => {
 
-    if (numero > 0) {
-        return "Positivo";
-    } else if (numero < 0) {
-        return "Negativo";
-    } else {
-        return "Cero"
-    }
-
+    return palabras.map(palabra => palabra.length);
 }
 
 module.exports = {
-    determinarSigno
+    longitudesPalabras
 }

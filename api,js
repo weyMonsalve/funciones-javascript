@@ -1,5 +1,10 @@
 const index = require('./index');
 
-console.log(index.determinarSigno(10));
-console.log(index.determinarSigno(-5));
-console.log(index.determinarSigno(0));
+const resultado1 = index.longitudesPalabras(["manzana", "pera", "uva"]);
+const resultado2 = index.longitudesPalabras(["gato", "perro", "elefante"]);
+const resultado3 = index.longitudesPalabras(["hola", "mundo"]);
+
+
+console.log(resultado1);
+console.log(resultado2);
+console.log(resultado3);
