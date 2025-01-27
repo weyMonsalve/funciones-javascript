@@ -1,24 +1,18 @@
-//   Convertir un número a un formato de moneda
+//    Ordenar tres números de mayor a menor
 
-// Crea una función llamada formatearMoneda que reciba dos parámetros:
+// Crea una función llamada ordenarNumeros que reciba tres números como parámetros.
+// La función debe devolverlos en un arreglo ordenado de mayor a menor
 
-// Un número (por ejemplo, 1000),
-// Y un símbolo de moneda (por ejemplo, "$" o "€").
 
-// La función debe devolver el número formateado como moneda (por ejemplo, "$1,000.00").
+function ordenarNumeros(num1, num2, num3) {
 
-function formatearMoneda(numero, simbolo) {
+    const numeros = [num1, num2, num3];
 
-    const moneda = numero.toLocaleString('es-ES', {
-        style: 'currency',
-        currency: simbolo === "$" ? "USD" : "EUR",
-        minimumFractionDigits: 2,
-        maximumFractionDigits: 2
-    });
+    numeros.sort((x, y) => y - x);
 
-    return moneda;
+    return numeros;
 }
 
 module.exports = {
-    formatearMoneda
+    ordenarNumeros
 }
