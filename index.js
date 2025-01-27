@@ -1,40 +1,24 @@
-//   Calcular la edad en años, meses y días
+//   Convertir un número a un formato de moneda
 
-// Crea una función llamada calcularEdad que reciba tres parámetros:
+// Crea una función llamada formatearMoneda que reciba dos parámetros:
 
-// El año de nacimiento,
-// El mes de nacimiento,
-// Y el día de nacimiento.
+// Un número (por ejemplo, 1000),
+// Y un símbolo de moneda (por ejemplo, "$" o "€").
 
-// La función debe devolver la edad actual en años, meses y días.
+// La función debe devolver el número formateado como moneda (por ejemplo, "$1,000.00").
 
+function formatearMoneda(numero, simbolo) {
 
-// index.js
-function calcularEdad(anioNacimiento, mesNacimiento, diaNacimiento) {
-    const fechaActual = new Date();
-    const anioActual = fechaActual.getFullYear();
-    const mesActual = fechaActual.getMonth() + 1; // Los meses comienzan en 0
-    const diaActual = fechaActual.getDate();
+    const moneda = numero.toLocaleString('es-ES', {
+        style: 'currency',
+        currency: simbolo === "$" ? "USD" : "EUR",
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+    });
 
-    let anios = anioActual - anioNacimiento;
-    let meses = mesActual - mesNacimiento;
-    let dias = diaActual - diaNacimiento;
-
-    if (meses < 0) {
-        anios -= 1;
-        meses += 12;
-    }
-
-    if (dias < 0) {
-        meses -= 1;
-        const diasEnMesAnterior = new Date(anioActual, mesActual - 1, 0).getDate();
-        dias += diasEnMesAnterior;
-    }
-
-    return { anios, meses, dias };
+    return moneda;
 }
 
-// Exporta la función
 module.exports = {
-    calcularEdad
-};
+    formatearMoneda
+}
