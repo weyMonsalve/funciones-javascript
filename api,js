@@ -1,9 +1,5 @@
 const index = require('./index');
 
-const resultado1 = index.ordenarNumeros(5, 2, 8);
-const resultado2 = index.ordenarNumeros(-3, 0, 12);
-const resultado3 = index.ordenarNumeros(7, 7, 7);
-
-console.log("Resulatdo 1", resultado1);
-console.log("Resultado 2", resultado2);
-console.log("Resultado 3", resultado3);
+console.log(index.convertirAFahrenheit(0));
+console.log(index.convertirAFahrenheit(25));
+console.log(index.convertirAFahrenheit(100));

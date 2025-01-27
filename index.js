@@ -1,18 +1,9 @@
-//    Ordenar tres números de mayor a menor
+//   Convertir una temperatura de Celsius a Fahrenheit usando una arrow function.
 
-// Crea una función llamada ordenarNumeros que reciba tres números como parámetros.
-// La función debe devolverlos en un arreglo ordenado de mayor a menor
-
-
-function ordenarNumeros(num1, num2, num3) {
-
-    const numeros = [num1, num2, num3];
-
-    numeros.sort((x, y) => y - x);
-
-    return numeros;
+const convertirAFahrenheit = (celsius) => {
+    return (celsius * 9 / 5) + 32;
 }
 
 module.exports = {
-    ordenarNumeros
+    convertirAFahrenheit
 }
