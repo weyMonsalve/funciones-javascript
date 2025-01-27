@@ -1,5 +1,5 @@
 const index = require('./index');
 
-const resultado = index.sumarArray([1, 2, 3, 4, 5])
+const resultado = index.contarCaracters("Hola, mundo!");
 
-console.log("La suma total es: ", resultado);
+console.log("El numero de caracteres es: ", resultado);

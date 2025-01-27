@@ -1,21 +1,7 @@
-//   Crear una arrow function que reciba un array de números y devuelva la suma de todos los elementos.
+// Diseñar una arrow function que tome un string y devuelva el número de caracteres que contiene.
 
-
-// index.js
-
-
-const sumarArray = (numeros) => {
-    let suma = 0;
-
-
-    numeros.forEach((numero) => {
-        suma += numero;
-    });
-
-    return suma;
-};
-
+const contarCaracters = (texto) => texto.length;
 
 module.exports = {
-    sumarArray
-};
+    contarCaracters
+}
